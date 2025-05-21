@@ -40,3 +40,18 @@ export type FormData = {
     customMessage?: string;
     comments?: string;
   };
+
+export interface User {
+  name: string;
+}
+
+export interface AdminUser extends User {
+  admin: true;
+}
+
+export type TUser = User | AdminUser;
+
+export enum FormType {
+  'admin'
+}
+

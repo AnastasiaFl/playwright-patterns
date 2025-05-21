@@ -1,8 +1,8 @@
 import { test } from '@playwright/test';
-import { FormPage } from '../elements/form-page';
-import { FormBuilder } from '../elements/form-builder';
+import { FormPage } from '../src/page-elements/form-page';
+import { FormBuilder } from '../src/helpers/form-builder';
 
-test.only('fill form using builder pattern', async ({ page }) => {
+test('fill form using builder pattern', async ({ page }) => {
   const formPage = new FormPage(page);
   await formPage.gotoPage();
 

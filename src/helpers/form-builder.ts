@@ -1,10 +1,12 @@
-import { FormData } from "./form-type";
+import { FormData } from "../types/form-type";
 
 export class FormBuilder {
   private data: FormData = {};
 
-  withTitle(title: string): FormBuilder {
-    this.data.title = title;
+  withTitle(title?: string): FormBuilder {
+    if (title) {
+      this.data.title = title;
+    }
     return this;
   }
 
@@ -104,7 +106,7 @@ export class FormBuilder {
     this.data.cardExpirationDate = cardExpirationDate;
     return this;
   }
-  withCardExpirationYear(cardExpirationYear: string): FormBuilder { 
+  withCardExpirationYear(cardExpirationYear: string): FormBuilder {
     this.data.cardExpirationYear = cardExpirationYear;
     return this;
   }

@@ -1,5 +1,5 @@
 import { Page, Locator, expect } from "@playwright/test";
-import { FormData } from "./form-type";
+import { FormData } from "../types/form-type";
 
 export class FormPage {
   readonly titleInput: Locator;

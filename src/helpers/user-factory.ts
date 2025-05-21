@@ -1,0 +1,97 @@
+import { FormData } from "../types/form-type";
+import { UserType } from "../types/user-type";
+
+export class UserFactory {
+  createUser(type: UserType): FormData {
+    switch (type) {
+      case "admin":
+        return  {
+          title: "Admin",
+          firstName: "Carlos",
+          lastName: "Alvarez",
+          fullName: "Carlos A. Alvarez",
+          company: "Tech Corp",
+          position: "Administrator",
+          addressLine1: "123 Main St",
+          addressLine2: "Suite 100",
+          city: "Tech City",
+          stateProvince: "CA",
+          country: "USA",
+          zip: "12345",
+          workPhone: "098-765-4321",
+          fax: "111-222-3333",
+          email: "admin-carlos@techcorp.com",
+          website: "www.techcorp.com",
+          userId: "1",
+          password: "Admin123!",
+          dayOfBirth: "1",
+          monthOfBirth: "1",
+          yearOfBirth: "2000",
+        };
+      case "qa-engineer":
+        return {
+          title: "QA Engineer",
+          firstName: "Sofia",
+          lastName: "Garcia",
+          fullName: "Sofia G. Garcia",
+          company: "QA Solutions",
+          position: "QA Engineer",
+          addressLine1: "456 QA St",
+          addressLine2: "QA Suite 200",
+          city: "QA City",
+          stateProvince: "NY",
+          country: "USA",
+          zip: "67890",
+          homePhone: "123-456-7890",
+          workPhone: "098-765-4321",
+          fax: "222-333-4444",
+          cellPhone: "555-666-7777",
+          email: "sofiagarcia@qasolutions.com",
+          website: "www.qasolutions.com",
+          userId: "1",
+        };
+      case "explorer":
+        return {
+          title: "Explorer",
+          firstName: "Marco",
+          lastName: "Polo",
+          fullName: "Marco Polo",
+          company: "Explorers Inc.",
+          position: "Explorer",
+          addressLine1: "123 Ocean Ave",
+          addressLine2: "Suite 100",
+          city: "Venice",
+          stateProvince: "Italy",
+          country: "Italy",
+          zip: "30100",
+          homePhone: "123-456-7890",
+          workPhone: "098-765-4321",
+          fax: "111-222-3333",
+          cellPhone: "444-555-6666",
+          email: "marcopolo@explorersinc.com",
+          website: "www.explorersinc.com",
+          userId: "marco123",
+          password: "secretpassword",
+          creditCardType: "Visa (Preferred)",
+          creditCardNumber: "4111 1111 1111 1111",
+          cardVerificationCode: "123",
+          cardExpirationDate: "12",
+          cardExpirationYear: "2025",
+          cardUserName: "Marco Polo",
+          cardIssuingBank: "Bank of Venice",
+          cardCustomerServicePhone: "800-555-0199",
+          sex: "male",
+          socialSecurityNumber: "123-45-6789",
+          driversLicenseNumber: "D1234567",
+          dayOfBirth: "1",
+          monthOfBirth: "1",
+          yearOfBirth: "2000",
+          age: "23",
+          birthPlace: "Venice, Italy",
+          income: "100000",
+          customMessage: "Hello, World!",
+          comments: "This is a test comment.",
+        };
+    }
+  }
+}
