@@ -1,5 +1,5 @@
 import { Page, Locator, expect } from "@playwright/test";
-import { FormData } from "../types/form-type";
+import { FormData } from "../types";
 
 export class FormPage {
   readonly titleInput: Locator;
@@ -150,8 +150,10 @@ export class FormPage {
     if (data.driversLicenseNumber)
       await this.driversLicenseNumberInput.fill(data.driversLicenseNumber);
     if (data.dayOfBirth) await this.dayOfBirth.selectOption(data.dayOfBirth);
-    if (data.monthOfBirth) await this.monthOfBirthInput.selectOption(data.monthOfBirth);
-    if (data.yearOfBirth) await this.yearOfBirthInput.selectOption(data.yearOfBirth);
+    if (data.monthOfBirth)
+      await this.monthOfBirthInput.selectOption(data.monthOfBirth);
+    if (data.yearOfBirth)
+      await this.yearOfBirthInput.selectOption(data.yearOfBirth);
     if (data.age) await this.ageInput.fill(data.age);
     if (data.birthPlace) await this.birthPlaceInput.fill(data.birthPlace);
     if (data.income) await this.incomeInput.fill(data.income);
@@ -166,10 +168,13 @@ export class FormPage {
       await expect(this.firstNameInput).toHaveValue(data.firstName);
     if (data.middleInitial)
       await expect(this.middleInitialInput).toHaveValue(data.middleInitial);
-    if (data.lastName) await expect(this.lastNameInput).toHaveValue(data.lastName);
-    if (data.fullName) await expect(this.fullNameInput).toHaveValue(data.fullName);
+    if (data.lastName)
+      await expect(this.lastNameInput).toHaveValue(data.lastName);
+    if (data.fullName)
+      await expect(this.fullNameInput).toHaveValue(data.fullName);
     if (data.company) await expect(this.companyInput).toHaveValue(data.company);
-    if (data.position) await expect(this.positionInput).toHaveValue(data.position);
+    if (data.position)
+      await expect(this.positionInput).toHaveValue(data.position);
     if (data.addressLine1)
       await expect(this.addressLine1Input).toHaveValue(data.addressLine1);
     if (data.addressLine2)
@@ -189,7 +194,8 @@ export class FormPage {
     if (data.email) await expect(this.emailInput).toHaveValue(data.email);
     if (data.website) await expect(this.websiteInput).toHaveValue(data.website);
     if (data.userId) await expect(this.userIdInput).toHaveValue(data.userId);
-    if (data.password) await expect(this.passwordInput).toHaveValue(data.password);
+    if (data.password)
+      await expect(this.passwordInput).toHaveValue(data.password);
     if (data.creditCardType)
       await expect(this.creditCardTypeSelect).toContainText(
         data.creditCardType
@@ -199,7 +205,7 @@ export class FormPage {
         data.creditCardNumber
       );
     if (data.cardVerificationCode)
-      await expect(this .cardVerificationCodeInput).toHaveValue(
+      await expect(this.cardVerificationCodeInput).toHaveValue(
         data.cardVerificationCode
       );
     if (data.cardExpirationDate)
@@ -213,9 +219,7 @@ export class FormPage {
     if (data.cardUserName)
       await expect(this.cardUserNameInput).toHaveValue(data.cardUserName);
     if (data.cardIssuingBank)
-      await expect(this.cardIssuingBankInput).toHaveValue(
-        data.cardIssuingBank
-      );
+      await expect(this.cardIssuingBankInput).toHaveValue(data.cardIssuingBank);
     if (data.cardCustomerServicePhone)
       await expect(this.cardCustomerServicePhoneInput).toHaveValue(
         data.cardCustomerServicePhone
@@ -241,6 +245,7 @@ export class FormPage {
     if (data.income) await expect(this.incomeInput).toHaveValue(data.income);
     if (data.customMessage)
       await expect(this.customMessageInput).toHaveValue(data.customMessage);
-    if (data.comments) await expect(this.commentsInput).toHaveValue(data.comments);
+    if (data.comments)
+      await expect(this.commentsInput).toHaveValue(data.comments);
   }
 }

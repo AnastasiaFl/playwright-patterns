@@ -1,11 +1,11 @@
-import { FormData } from "../types/form-type";
-import { UserType } from "../types/user-type";
+import { FormData } from "../types";
+import { UserType } from "../types";
 
 export class UserFactory {
   createUser(type: UserType): FormData {
     switch (type) {
-      case "admin":
-        return  {
+      case UserType.ADMIN:
+        return {
           title: "Admin",
           firstName: "Carlos",
           lastName: "Alvarez",
@@ -28,7 +28,7 @@ export class UserFactory {
           monthOfBirth: "1",
           yearOfBirth: "2000",
         };
-      case "qa-engineer":
+      case UserType.QAENGINEER:
         return {
           title: "QA Engineer",
           firstName: "Sofia",
@@ -50,7 +50,7 @@ export class UserFactory {
           website: "www.qasolutions.com",
           userId: "1",
         };
-      case "explorer":
+      case UserType.EXPORER:
         return {
           title: "Explorer",
           firstName: "Marco",

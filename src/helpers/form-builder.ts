@@ -1,4 +1,4 @@
-import { FormData } from "../types/form-type";
+import { FormData } from "../types";
 
 export class FormBuilder {
   private data: FormData = {};
