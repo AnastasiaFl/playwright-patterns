@@ -1,7 +1,7 @@
 import { test } from "@playwright/test";
 import { cloneForm } from "../src/helpers/prototype-cloning";
-import { baseGuestFormData } from "../src/types";
 import { FormPage } from "../src/page-elements/form-page";
+import { baseGuestFormData } from "../src/data/baseGuestFormData";
 
 test("Fill form using prototype pattern with base guest", async ({ page }) => {
   const formPage = new FormPage(page);

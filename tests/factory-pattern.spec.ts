@@ -1,7 +1,7 @@
 import { test } from "@playwright/test";
 import { FormPage } from "../src/page-elements/form-page";
 import { UserFactory } from "../src/helpers/user-factory";
-import { UserType } from "../src/types";
+import { UserType } from "../src/data/constants";
 
 const userFactory = new UserFactory();
 const data = userFactory.createUser(UserType.ADMIN);

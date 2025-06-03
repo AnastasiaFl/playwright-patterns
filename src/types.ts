@@ -40,18 +40,3 @@ export interface FormData {
   customMessage?: string;
   comments?: string;
 }
-
-export const baseGuestFormData: FormData = {
-  title: "Guest",
-  position: "Guest",
-  country: "USA",
-  workPhone: "n/a",
-  website: "n/a",
-  customMessage: "Guest users from USA",
-};
-
-export enum UserType {
-  ADMIN = "admin",
-  QAENGINEER = "qa-engineer",
-  EXPORER = "explorer",
-}

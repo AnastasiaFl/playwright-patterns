@@ -1,5 +1,5 @@
+import { UserType } from "../data/constants";
 import { FormData } from "../types";
-import { UserType } from "../types";
 
 export class UserFactory {
   createUser(type: UserType): FormData {
