@@ -248,4 +248,9 @@ export class FormPage {
     if (data.comments)
       await expect(this.commentsInput).toHaveValue(data.comments);
   }
+
+  async fillAndCheckForm(data: FormData) {
+    await this.fillForm(data);
+    await this.checkFormHasText(data);
+  }
 }
